@@ -8,5 +8,6 @@ function openAbout() {
     <div>
         Index
         <button @click="openAbout">Перейти</button>
+        <InputField variant="black" placeholder="Введите ваш email для подписки" />
     </div>
 </template>
