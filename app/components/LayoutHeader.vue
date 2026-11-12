@@ -1,6 +1,15 @@
+<script setup lang="ts">
+const counter = ref(0);
+
+function increase() {
+    counter.value++;
+}
+</script>
+
 <template>
-    <div class="header">
+    <div class="header" @click="increase">
         <NuxtLink to="/">
+            {{ counter }}
             <IconLogo />
         </NuxtLink>
         <div class="header__content">
@@ -29,6 +38,7 @@
 
 <style scoped>
 .header {
+    padding: 0 16px;
     width: 100%;
     margin: 0 auto;
     max-width: 1248px;
@@ -36,19 +46,20 @@
     justify-content: space-between;
     margin-top: 48px;
     border-bottom: 1px solid var(--color-gray);
-}
 
-.header__content {
-    display: flex;
-    gap: 60px;
-    align-items: center;
-}
 
-.header__menu {
-    display: flex;
-    gap: 60px;
-    align-items: center;
+    &__content {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+    }
 
+    &__menu {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+
+    }
 }
 
 .header__menu a {

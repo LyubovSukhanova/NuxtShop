@@ -1,11 +1,10 @@
-import { loadCustomCollection } from "@nuxt/icon/utils";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     runtimeConfig: {
         token: "",
         public: {
             apiurl: "",
+            imageurl: "",
         },
     },
     icon: {
@@ -19,4 +18,13 @@ export default defineNuxtConfig({
     modules: ["@nuxt/eslint", "@nuxt/fonts", "@nuxt/image", "@nuxt/scripts", "@nuxt/icon/module"],
     compatibilityDate: "2025-07-15",
     devtools: { enabled: true },
+    routeRules: {
+        "/about": { prerender: true },
+        "/": { swr: true },
+    },
+    postcss: {
+        plugins: {
+            "postcss-nested": {},
+        },
+    },
 });

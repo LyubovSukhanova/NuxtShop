@@ -6,10 +6,10 @@ const data = defineModel<string>();
 </script>
 
 <template>
-    <input class="input" :class="variant" v-model="data" />
+    <input :class="[$style[variant], $style.input]" v-model="data" />
 </template>
 
-<style scoped>
+<style module>
 .input {
     padding: 12px 0;
     background: none;

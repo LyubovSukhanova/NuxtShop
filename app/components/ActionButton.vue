@@ -29,7 +29,7 @@ const { color = 'primary' } = defineProps<{
 
 .primary:hover {
     background: var(--color-black-hover);
-    color: var(-color-white);
+    color: var(--color-white);
 }
 
 .ghost {
