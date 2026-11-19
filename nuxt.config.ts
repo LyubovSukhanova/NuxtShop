@@ -15,7 +15,15 @@ export default defineNuxtConfig({
             },
         ],
     },
-    modules: ["@nuxt/eslint", "@nuxt/fonts", "@nuxt/image", "@nuxt/scripts", "@nuxt/icon/module"],
+    modules: [
+        "@nuxt/eslint",
+        "@nuxt/fonts",
+        "@nuxt/image",
+        "@nuxt/scripts",
+        "@nuxt/icon/module",
+        "@pinia/nuxt",
+        "pinia-plugin-persistedstate/nuxt",
+    ],
     compatibilityDate: "2025-07-15",
     devtools: { enabled: true },
     routeRules: {
